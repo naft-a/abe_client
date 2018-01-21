@@ -32,9 +32,17 @@ module AbeClient
   end
 
   # Load the schema from the file system
-  Schema = GraphQL::Client.load_schema(AbeClient.schema_path)
+  if File.exist?(AbeClient.schema_path)
+    Schema = GraphQL::Client.load_schema(AbeClient.schema_path)
+  else
+    Schema = GraphQL::Client.load_schema(HTTP)
+  end
 
   # Create a client for the schema & created HTTP endpoint
   Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
 
 end
+
+require 'abe_client/blog_homepage'
+require 'abe_client/post'
+require 'abe_client/posts'

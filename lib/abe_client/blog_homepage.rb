@@ -12,6 +12,7 @@ module AbeClient
           features:features(include_empty:false) {
             position
             post {
+              id
               title
               url
               published_at
@@ -26,16 +27,19 @@ module AbeClient
           }
 
           latest:posts(status:PUBLISHED, limit:5, exclude_featured:true, only_visible:true) {
-            title
-            url
-            published_at
-            excerpt
-            color
-            author {
-              display_name
-            }
-            image(type:thumb400) {
+            posts {
+              id
+              title
               url
+              published_at
+              excerpt
+              color
+              author {
+                display_name
+              }
+              image(type:thumb400) {
+                url
+              }
             }
           }
 
@@ -73,7 +77,7 @@ module AbeClient
     end
 
     def latest
-      @data.blog.latest
+      @data.blog.latest.posts
     end
 
     def categories
