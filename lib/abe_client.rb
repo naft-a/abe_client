@@ -46,3 +46,4 @@ end
 require 'abe_client/blog_homepage'
 require 'abe_client/post'
 require 'abe_client/posts'
+require 'abe_client/category_posts'
