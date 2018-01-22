@@ -2,9 +2,9 @@ module AbeClient
   class Posts < Array
 
     PostsQuery = Client.parse <<-'GRAPHQL'
-      query($blog: String!, $page: Int!, $per_page: Int) {
+      query($blog: String!, $page: Int!, $per_page: Int, $categories: [String!]) {
         blog(permalink: $blog) {
-          posts(page: $page, per_page: $per_page) {
+          posts(page: $page, per_page: $per_page, categories: $categories) {
             page_info {
               total_records
             }
