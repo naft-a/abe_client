@@ -16,6 +16,7 @@ module AbeClient
               title
               url
               published_at
+              excerpt
               color
               author {
                 display_name
