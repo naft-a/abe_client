@@ -23,6 +23,9 @@ module AbeClient
               image(type:thumb800) {
                 url
               }
+              icon {
+                url
+              }
             }
           }
 
@@ -38,6 +41,9 @@ module AbeClient
                 display_name
               }
               image(type:thumb400) {
+                url
+              }
+              icon {
                 url
               }
             }
