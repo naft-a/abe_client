@@ -35,6 +35,7 @@ module AbeClient
               image(type:thumb400) {
                 url
               }
+              permalink
             }
             excerpt
             related(limit:2) {
