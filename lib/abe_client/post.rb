@@ -5,6 +5,7 @@ module AbeClient
         blog(permalink:$blog) {
           post(permalink:$post) {
             id
+            permalink
             title
             published_at
             url
