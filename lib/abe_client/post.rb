@@ -35,6 +35,7 @@ module AbeClient
                 url
               }
             }
+            excerpt
             related(limit:2) {
               posts {
                 id
