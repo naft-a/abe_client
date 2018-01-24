@@ -17,7 +17,7 @@ module AbeClient
               url
             }
             icon {
-              url
+              binary
             }
             color
             html
