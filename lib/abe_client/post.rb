@@ -42,6 +42,7 @@ module AbeClient
                 url
               }
               permalink
+              url
             }
             excerpt
             related(limit:2) {
