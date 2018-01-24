@@ -19,7 +19,11 @@ module AbeClient
               excerpt
               url
               color
+              contrast_color
               published_at
+              icon {
+                binary
+              }
               image(type: thumb800) {
                 url
               }
