@@ -25,6 +25,7 @@ module AbeClient
             allow_reactions
             reactions
             reactions_for_browser(browser_id:$browser_id)
+            share_links
             author {
               display_name
               biography
