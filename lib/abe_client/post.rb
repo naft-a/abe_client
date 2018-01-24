@@ -20,6 +20,7 @@ module AbeClient
               binary
             }
             color
+            contrast_color
             html
             allow_sharing
             allow_reactions
