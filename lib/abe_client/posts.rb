@@ -6,6 +6,7 @@ module AbeClient
         blog(permalink: $blog) {
           posts(page: $page, per_page: $per_page, categories: $categories) {
             page_info {
+              total_pages
               total_records
             }
             posts {
@@ -44,6 +45,10 @@ module AbeClient
     def initialize(array, page_info)
       @page_info = page_info
       super(array.to_a)
+    end
+
+    def total_pages
+      @page_info.total_pages
     end
 
     def total_posts
