@@ -11,6 +11,10 @@ module AbeClient
           }
           posts(page: $page, per_page: $per_page, blogs: [$blog]) {
             page_info {
+              current_page
+              next_page
+              prev_page
+              total_pages
               total_records
             }
             posts {
@@ -52,6 +56,22 @@ module AbeClient
       @category = data
       @page_info = data.posts.page_info
       super(data.posts.posts)
+    end
+
+    def current_page
+      @page_info.current_page
+    end
+
+    def next_page
+      @page_info.next_page
+    end
+
+    def prev_page
+      @page_info.prev_page
+    end
+
+    def total_pages
+      @page_info.total_pages
     end
 
     def total_posts
