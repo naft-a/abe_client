@@ -52,8 +52,12 @@ module AbeClient
                 published_at
                 excerpt
                 url
+                contrast_color
                 image(type:thumb400) {
                   url
+                }
+                icon {
+                  binary
                 }
               }
             }

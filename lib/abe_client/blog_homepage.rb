@@ -39,6 +39,7 @@ module AbeClient
               published_at
               excerpt
               color
+              contrast_color
               author {
                 display_name
               }
@@ -46,7 +47,7 @@ module AbeClient
                 url
               }
               icon {
-                url
+                binary
               }
             }
           }
