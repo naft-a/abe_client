@@ -14,12 +14,13 @@ module AbeClient
               excerpt
               url
               color
+              contrast_color
               published_at
               image(type: thumb800) {
                 url
               }
               icon {
-                url
+                binary
               }
               author {
                 display_name
