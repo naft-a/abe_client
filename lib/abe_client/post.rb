@@ -13,6 +13,9 @@ module AbeClient
               name
               permalink
             }
+            thumbnail: image(type:thumb800) {
+              url
+            }
             image(type:thumb1400) {
               url
             }
