@@ -36,7 +36,8 @@ module AbeClient
     GRAPHQL
 
     def self.get(blog, page, options = {})
-      result = Client.query(PostsQuery, :variables => {:blog => blog, :page => page, :year => options[:year], :month => options[:month], :per_page => options[:per_page] || 12})
+      params = {:blog => blog, :page => page, :per_page => options[:per_page] || 12, :month => options[:month], :year => options[:year]}
+      result = Client.query(PostsQuery, :variables => params.compact)
       if result.data.blog
         self.new(result.data.blog.posts.posts, result.data.blog.posts.page_info)
       else
