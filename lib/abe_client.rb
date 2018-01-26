@@ -44,9 +44,9 @@ module AbeClient
 end
 
 require 'abe_client/blog_homepage'
-require 'abe_client/categories'
+require 'abe_client/category_posts'
 require 'abe_client/post'
 require 'abe_client/posts'
-require 'abe_client/category_posts'
 require 'abe_client/rss_feed'
+require 'abe_client/sitemap'
 require 'abe_client/subscriber'
