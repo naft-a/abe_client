@@ -55,6 +55,7 @@ module AbeClient
                 published_at
                 excerpt
                 url
+                color
                 contrast_color
                 image(type:thumb400) {
                   url
