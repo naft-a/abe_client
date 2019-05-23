@@ -13,6 +13,7 @@ module AbeClient
               name
               permalink
             }
+            header_style
             thumbnail: image(type:thumb800) {
               url
             }
