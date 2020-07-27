@@ -38,7 +38,7 @@ module AbeClient
     def self.get(blog, page, options = {})
       params = {:blog => blog, :page => page, :per_page => options[:per_page] || 12, :month => options[:month], :year => options[:year]}
       result = Client.query(PostsQuery, :variables => params.compact)
-      if result.data.blog
+      if result.data && result.data.blog
         self.new(result.data.blog.posts.posts, result.data.blog.posts.page_info)
       else
         puts result.inspect
